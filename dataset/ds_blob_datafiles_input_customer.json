@@ -1,0 +1,33 @@
+{
+	"name": "ds_blob_datafiles_input_customer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_rudrasoft",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customer.txt",
+				"folderPath": "input",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CustomerKey",
+				"type": "String"
+			},
+			{
+				"name": "CustomerName",
+				"type": "String"
+			}
+		]
+	}
+}
