@@ -1,0 +1,9 @@
+{
+	"name": "adfrudrasoft",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c498ecf5-bbbd-460b-8550-df8ba9b51ac0",
+		"tenantId": "65657c56-78a0-40b5-8471-3289804ebb3d"
+	}
+}
