@@ -1,0 +1,26 @@
+{
+	"name": "ds_DATASTORES_customer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_DATASTORE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CustomerKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "customer"
+		}
+	}
+}
