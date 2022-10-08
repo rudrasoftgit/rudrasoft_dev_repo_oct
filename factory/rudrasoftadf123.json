@@ -1,0 +1,9 @@
+{
+	"name": "rudrasoftadf123",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4eed1286-18b7-46fc-921a-92a8e8ca88e6",
+		"tenantId": "65657c56-78a0-40b5-8471-3289804ebb3d"
+	}
+}
