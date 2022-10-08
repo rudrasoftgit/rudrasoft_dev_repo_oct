@@ -1,0 +1,25 @@
+{
+	"name": "evnt_based_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_execute_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/datafiles/blobs/input/customer",
+			"blobPathEndsWith": ".txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/2233ca57-b30e-4e44-8364-8d4f6b6376cb/resourceGroups/rudrasoft-dev/providers/Microsoft.Storage/storageAccounts/rudrasoftadls321",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
