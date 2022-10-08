@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pl_move_data_from_input_to_output",
 	"properties": {
 		"activities": [
 			{
