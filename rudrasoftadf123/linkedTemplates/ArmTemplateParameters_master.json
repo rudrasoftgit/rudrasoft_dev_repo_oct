@@ -5,13 +5,7 @@
 		"factoryName": {
 			"value": "rudrasoftadf123"
 		},
-		"ls_DATASTORE_connectionString": {
-			"value": ""
-		},
 		"ls_adls_rudrasoftadls_accountKey": {
-			"value": ""
-		},
-		"ls_blob_rudrasoft_connectionString": {
 			"value": ""
 		},
 		"ls_adls_rudrasoftadls_properties_typeProperties_url": {
