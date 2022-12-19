@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfrudrasoft"
+		},
+		"ls_DATASTORE_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_DATASTORE'"
+		},
+		"ls_adls_rudrasoftadls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls_rudrasoftadls'"
+		},
+		"ls_blob_rudrasoft_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob_rudrasoft'"
+		},
+		"ls_adls_rudrasoftadls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://rudrasoftadlsgen2.dfs.core.windows.net/"
+		},
+		"evnt_based_trigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/2233ca57-b30e-4e44-8364-8d4f6b6376cb/resourceGroups/rudrasoft-dev/providers/Microsoft.Storage/storageAccounts/rudrasoftadls321"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfrudrasoft_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_DATASTORE_connectionString": {
+						"value": "[parameters('ls_DATASTORE_connectionString')]"
+					},
+					"ls_adls_rudrasoftadls_accountKey": {
+						"value": "[parameters('ls_adls_rudrasoftadls_accountKey')]"
+					},
+					"ls_blob_rudrasoft_connectionString": {
+						"value": "[parameters('ls_blob_rudrasoft_connectionString')]"
+					},
+					"ls_adls_rudrasoftadls_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_rudrasoftadls_properties_typeProperties_url')]"
+					},
+					"evnt_based_trigger_properties_typeProperties_scope": {
+						"value": "[parameters('evnt_based_trigger_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

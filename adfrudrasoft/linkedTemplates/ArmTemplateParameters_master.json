@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfrudrasoft"
+		},
+		"ls_DATASTORE_connectionString": {
+			"value": ""
+		},
+		"ls_adls_rudrasoftadls_accountKey": {
+			"value": ""
+		},
+		"ls_blob_rudrasoft_connectionString": {
+			"value": ""
+		},
+		"ls_adls_rudrasoftadls_properties_typeProperties_url": {
+			"value": "https://rudrasoftadlsgen2.dfs.core.windows.net/"
+		},
+		"evnt_based_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/2233ca57-b30e-4e44-8364-8d4f6b6376cb/resourceGroups/rudrasoft-dev/providers/Microsoft.Storage/storageAccounts/rudrasoftadls321"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
