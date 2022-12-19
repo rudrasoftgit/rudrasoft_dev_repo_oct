@@ -1,9 +1,9 @@
 {
 	"name": "adfrudrasoft",
-	"location": "eastus",
+	"location": "centralindia",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "c498ecf5-bbbd-460b-8550-df8ba9b51ac0",
+		"principalId": "caf3cfa7-8e7d-426e-9a29-040aa5941014",
 		"tenantId": "65657c56-78a0-40b5-8471-3289804ebb3d"
 	}
 }
